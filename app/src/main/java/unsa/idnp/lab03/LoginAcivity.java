@@ -33,6 +33,16 @@ public class LoginAcivity extends AppCompatActivity {
 
                 Result<User> result =  userDAO.login(usernameEditText.getText().toString(), passwordEditText.getText().toString());
 
+                if (result instanceof Result.Success) {
+                    Log.i(TAG, "Usuario Logeado");
+                    Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                    intent.putExtra("userName", usernameEditText.getText().toString());
+                    startActivity(intent);
+                }
+                else{
+                    Log.i(TAG, "No reconocido");
+
+                }
             }
         });
     }
