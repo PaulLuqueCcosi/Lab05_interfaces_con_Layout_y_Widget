@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
     tools:context=".SearchActivity">
 
     <TextView
@@ -12,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Buscar Postulante"
-        android:textSize="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/dniBuscar"
         app:layout_constraintStart_toEndOf="@+id/dniBuscar"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,10 +23,11 @@
         android:id="@+id/dni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
         android:text="DNI:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dniBuscar" />
 
@@ -50,7 +53,8 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="149dp"
         android:text="Colegio de Procedencia:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextColegio"
         app:layout_constraintTop_toBottomOf="@+id/Nombres" />
@@ -68,19 +72,31 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/apellidoPaterno4"
         app:layout_constraintEnd_toEndOf="parent" />
 
-        <EditText
-            android:id="@+id/editTextApellidoPaterno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="218dp"
-            android:layout_marginEnd="17dp"
-            android:ems="10"
-            android:textSize="15dp"
-            android:inputType="none"
-            android:clickable="false"
-            android:focusable="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editTextApellidoPaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/apellidoPaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="Apellido Paterno:"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dni" />
 
     <TextView
         android:id="@+id/Nombres"
@@ -89,7 +105,8 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="59dp"
         android:text="Nombres:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apellidoPaterno2" />
 
@@ -99,7 +116,8 @@
         android:layout_height="21dp"
         android:layout_marginStart="27dp"
         android:text="Apellido Materno:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextApellidoMaterno"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -147,24 +165,14 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextApellidoMaterno" />
 
     <TextView
-        android:id="@+id/apellidoPaterno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="47dp"
-        android:text="Apellido Paterno:"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dni" />
-
-    <TextView
         android:id="@+id/apellidoPaterno5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="92dp"
         android:text="Carrera a la que postula:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextCerrera" />
 
@@ -174,7 +182,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:text="Fecha de Nacimiento:"
-        android:textSize="16dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextFechadeNacimiento"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -195,10 +204,11 @@
         android:id="@+id/buttonBuscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
         android:onClick="buscarPostulante"
         android:text="Buscar"
+        android:background="@drawable/button_menu"
         app:layout_constraintBottom_toTopOf="@+id/editTextDni"
         app:layout_constraintStart_toStartOf="@+id/editTextDni" />
 
@@ -217,15 +227,18 @@
 
     <Button
         android:id="@+id/buttonAtras"
-        android:layout_width="99dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="8dp"
         android:onClick="atras"
         android:text="Atras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCerrera" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCerrera"
+        android:background="@drawable/button_exit"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
