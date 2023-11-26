@@ -63,4 +63,8 @@ public class MenuActivity extends AppCompatActivity {
 
 
     }
+
+    public void salir(View view){
+        finish();
+    }
 }

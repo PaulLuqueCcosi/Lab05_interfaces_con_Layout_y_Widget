@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@color/white"
+        android:background="#00000000"
         android:orientation="horizontal">
 
         <ImageView
@@ -42,7 +42,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Ingenieria"
-                android:textSize="26sp" />
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -53,8 +55,8 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="istemas"
-                android:textColor="#BDB7B7"
+                android:text="Sistemas"
+                android:textColor="@color/black"
                 android:textSize="28sp" />
         </LinearLayout>
 
